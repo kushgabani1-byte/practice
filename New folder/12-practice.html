@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>12-Practice</title>
+    </head>
+    <body>
+       <button class="start-button">Start</button>
+       <button class="cart-button" onclick="updateCartButton()">Add to Cart.</button>
+       <p class="added"></p>
+       <script>
+            function updateButton() {
+
+                let button = document.querySelector('.start-button');
+                button.innerHTML = 'Loading...';
+
+                const intervalId= setInterval(function() {
+                    button.innerHTML = 'Finished!';
+                }, 1000);
+            }
+
+             document.body.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter') {
+                    updateButton();
+                }
+             });
+       </script>
+    </body>
+    </html>
+
+    
